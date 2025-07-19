@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 23</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="stars"></canvas>
+    <div class="stars"></div>
+
+    <audio id="bg-music" loop>
+        <source src="audio/audios.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <div class="envelope bounce" id="envelope">
+            <img src="images/amplop.png" alt="Amplop">
+            <p>Hadiah untuk kamu</p>
+        </div>
+
+        <div class="form-container hidden" id="form-container">
+            <input type="text" id="nama" placeholder="Masukkan nama kamu">
+            <button id="lanjut-btn">Lanjut</button>
+        </div>
+
+        <div class="message-container hidden" id="message-container">
+            <div class="paper slide-up">
+                <div class="love-icon">💖</div>
+                <h2>Selamat Ulang Tahun Sayanggkuu, <span id="nama-output"></span>!</h2>
+                <p id="typewriter"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
