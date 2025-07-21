@@ -111,7 +111,7 @@ function updateStars() {
 setInterval(drawStars, 33);
 
 const pesanUcapan = `
-Selamat ulang tahun yaa, sayangku yang paling manis dan paling ngeselin (tapi tetap aku cintai terusss~ 🥰) <br><br>
+Selamat ulang tahun yaa, sayangku yang paling manis dan paling ngeselin 🥰 <br><br>
 
 Hari ini kamu tambah umur, tapi tetep nggak nambah tinggi 😝 — eh tapi nggak apa-apa, yang penting hatinya makin luas dan sabarnya makin tebal buat hadapin aku 😆 <br><br>
 
@@ -145,6 +145,7 @@ function ketikTeks(teks, elemenId, kecepatan = 50) {
       }
     } else {
       clearInterval(interval);
+      document.getElementById("downloadPrompt").style.display = "block";
     }
   }, kecepatan);
 }

@@ -227,3 +227,18 @@ button {
     opacity: 0;
   }
 }
+
+.btn-download {
+  padding: 12px 20px;
+  background-color: #ff6b81;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #ff4757;
+}
