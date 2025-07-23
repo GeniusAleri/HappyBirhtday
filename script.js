@@ -217,7 +217,7 @@ document.getElementById("btnDownload").addEventListener("click", function () {
   }).then((result) => {
     if (result.isConfirmed) {
       // 1. Hentikan lagu
-      const audio = document.getElementById("bgMusic");
+      const audio = document.getElementById("bg-music");
       if (audio) {
         audio.pause();
         audio.currentTime = 0;
