@@ -203,3 +203,36 @@ function createFallingHeart() {
 
 // Ulangi terus setiap 300ms
 setInterval(createFallingHeart, 300);
+
+document.getElementById("btnDownload").addEventListener("click", function () {
+  Swal.fire({
+    title: "Yakin mau ambil hadiahnya?",
+    text: "Tapi nanti lagunya berhenti, ya!",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Ya, Ambil!",
+    cancelButtonText: "Nanti aja",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // 1. Hentikan lagu
+      const audio = document.getElementById("bgMusic");
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+
+      // 2. Mulai download file
+      const link = document.createElement("a");
+      link.href = "file/happy23.apk";
+      link.download = "happy23.apk";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // 3. Opsional: tampilkan notifikasi
+      Swal.fire("Hadiah Dikirim!", "Selamat menikmati 🎁", "success");
+    }
+  });
+});
